@@ -1,0 +1,72 @@
+body {
+    background-color: azure;
+    margin: 0px;
+}
+
+.containerHeader {
+    background-color: cornflowerblue;
+    text-align: center;
+    height: 227px;
+    max-height: 300px;
+}
+
+.divlogo {
+    float: left;
+    height: 100%;
+    text-align: left;
+    width: auto;
+}
+
+.divtitulo {
+    float: left;
+    padding: 20px;
+    margin-left: 15%;
+    margin-top: 15px;
+    color: cornsilk;
+    font-size: 200%;
+    width: auto;
+    max-width: 75%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.divfecha {
+    font: caption;
+    font-size-adjust: inherit;
+    color: whitesmoke;
+    font-size: 100%;
+    width: 20%;
+    margin-top: 20px;
+    float: right;
+    text-align: center;
+    height: 100px;
+}
+
+.divbanner {
+    background-color: darkslateblue;
+    padding: 5px;
+    padding-bottom: 10px;
+    height: 60px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.contenedorPosts {
+    text-align: center;
+    background-color: darkgray;
+}
+
+.post {
+    margin-top:20px;
+    padding: 10px;
+    float:left;
+    margin-left:1%;
+    width:30%;
+    border: 2px dotted cornflowerblue
+
+}
+
+.contenedorSuscripcion{
+    margin-top:40px;
+    padding-left: 40px;
+    text-align:center;
+}
