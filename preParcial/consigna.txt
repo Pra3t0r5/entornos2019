@@ -1,0 +1,20 @@
+Tablas:
+
+Usuarios: id(PK),nombre,email,clave
+Alumnos: legajo(PK),nombre,apellido,creador(FK_Usuarios)
+Notas: id(PK),fecha,valor,alumno(FK_ALumnos)
+
+Funcionalidades:
+
+-Login Usuarios
+-Alta alumno
+-Carga Nota
+-consulta historial alumno 
+    -ultimas 5 Notas
+    -promedio
+-buscador Alumnos
+-ultimo alumno con 
+    -mayor
+    -menor
+        -Nota
+-logout
