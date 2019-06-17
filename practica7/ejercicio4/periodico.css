@@ -1,24 +1,29 @@
-body{
-background-color: darkslategray;
+body {
+    background-color: darkslategray;
 }
+
 .container {
-    margin-top: 50px;
-    padding-left: 10%;
+    display: flex;
+    margin-top: 10px;
     padding-left: 10%;
     background-color: aliceblue;
 }
 
 .filter {
+    width: 20%;
     text-align: center;
 }
 
 .content {
-    border-left: 1px;
-    border-left-color: aqua;
+    flex-grow: 1;
+    padding-left: 10%;
+    border-left: 10px;
+    border-left-color: darkslategray;
     border-left-style: double;
 }
 
-.title{
+.title {
     font-family: 'Times New Roman', Times, serif;
     color: cornflowerblue;
+    text-align: center;
 }

@@ -9,59 +9,57 @@
     <title>Periodico</title>
 
     <?php if (!isset($_COOKIE['idTitularSeleccionado'])) {
-        $mostrarTitularID = 0;
+        $mostrarTitularID = "0";
     } else {
         $mostrarTitularID = $_COOKIE['idTitularSeleccionado'];
     }
-    if (!isset($_GET['filtro'])) {
-        setcookie($_COOKIE['idTitularSeleccionado'] = 0);
-    } else {
-        if (condition) {
-            setcookie($_COOKIE['idTitularSeleccionado'] = $_GET['politica']);
-        }
-        if (condition) {
-            setcookie($_COOKIE['idTitularSeleccionado'] = $_GET['economia']);
-        }
-        if (condition) {
-            setcookie($_COOKIE['idTitularSeleccionado'] = $_GET['deportes']);
-        }
+    if (isset($_GET['filtro'])) {
+        setcookie('idTitularSeleccionado', $_GET['categoria']);
     }
     ?>
 </head>
 
 <body>
-    <div class="container filter">
-        <h2>Filtro</h2>
-        <form name="filtro" action="" method="get">
-            <label for="politica">Politica</label>
-            <input type="radio" name="politica" id="1" value="1">
-            <label for="economia">Economia</label>
-            <input type="radio" name="economia" id="2" value="2">
-            <label for="deportes">Deportes</label>
-            <input type="radio" name="deportes" id="3" value="3">
-            <input type="submit" value="Filtrar">
-        </form>
+    <div class="container title">
+        <h1>Periodico</h1>
     </div>
+    <div class="container">
+        <div class="filter">
+            <h2>Filtro</h2>
+            <form  action="" method="GET">
+                <label for="categoria"><strong>Categoria:</strong> </label> <br>
+                <input type="radio" name="categoria" id="1" value="1">Politica <br>
+                <input type="radio" name="categoria" id="2" value="2">Economia <br>
+                <input type="radio" name="categoria" id="3" value="3">Deportes <br>
+                <input type="submit" name="filtro">
+            </form>
+        </div>
 
-    <?php if ($mostrarTitularID != 0) {
-        # mostrar elegido
-    } else {
-        # mostrar todo
-    }
-    ?>
-    <!--mostrar en base a la cookie seteada por el form-->
-    <div class="container content">
-        <h2 class="title">Noticias</h2>
-        <div>
-            <h3>Politica</h3>
-        </div>
-        <div>
-            <h3>Economia</h3>
-        </div>
-        <div>
-            <h3>Deportes</h3>
+        <div class="content">
+            <h2 class="">Noticias</h2>
+            <?php switch ($mostrarTitularID) {
+                case "1":
+                    echo ("<div id='1'><h3>Politica</h3><p>kajsdfhkjsdhfkasdhfkjsfdhkjsagfkljasdglkjfasfasfasjfasgfkjasgfagsfjas</p></div>");
+                    break;
+                case "2":
+                    echo ("<div id='2'><h3>Economia</h3><p>128748912364892176498127648712648921648917264192846826482164782163478126498</p></div>");
+                    break;
+                case "3":
+                    echo ("<div id='3'><h3>Deportes</h3><p>j1hg4jh23g4hj12gk12hj4gjh12g4hj12g4hj23g4h24jk12g4jhg12j4gh122g4hj</p></div>");
+                    break;
+                default:
+                    echo ("<div id='1'><h3>Politica</h3></div>
+                        <div id='2'><h3>Economia</h3></div>
+                        <div id='3'><h3>Deportes</h3></div>");
+                    break;
+            }
+            ?>
         </div>
     </div>
+    <!--mostrar en base a la cookie seteada por el form-->
+
+
+
 </body>
 
 </html>
