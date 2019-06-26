@@ -1,0 +1,37 @@
+.contenedor {
+    background-color: cadetblue;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    display: flex;
+    width: 38%;
+}
+
+.formulario {
+    background-color: bisque;
+    padding-left: 10px;
+    width: 200px;
+}
+
+.foto {
+    flex-grow: inherit;
+    padding-left: 10px;
+    max-width: 20%;
+    height: 200px;
+    width: 300px;
+}
+
+.input-group {
+    margin-top: 5px;
+}
+
+.bordeado {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
